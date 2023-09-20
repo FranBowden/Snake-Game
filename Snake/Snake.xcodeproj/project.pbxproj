@@ -12,6 +12,7 @@
 		755285152ABB55BB003F3B1A /* SDL2_ttf in Frameworks */ = {isa = PBXBuildFile; fileRef = 755285142ABB55BA003F3B1A /* SDL2_ttf */; };
 		755285172ABB55CF003F3B1A /* SDL2_image in Frameworks */ = {isa = PBXBuildFile; fileRef = 755285162ABB55CF003F3B1A /* SDL2_image */; settings = {ATTRIBUTES = (Required, ); }; };
 		7552851A2ABB5C74003F3B1A /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755285192ABB5C74003F3B1A /* application.cpp */; };
+		7552851D2ABB6098003F3B1A /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7552851B2ABB6098003F3B1A /* player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		755285162ABB55CF003F3B1A /* SDL2_image */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = SDL2_image; path = ../../../../../Library/Frameworks/SDL2_image.framework/Versions/A/SDL2_image; sourceTree = "<group>"; };
 		755285182ABB5BD2003F3B1A /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		755285192ABB5C74003F3B1A /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		7552851B2ABB6098003F3B1A /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		7552851C2ABB6098003F3B1A /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				755284EA2ABB12A5003F3B1A /* main.cpp */,
+				7552851B2ABB6098003F3B1A /* player.cpp */,
+				7552851C2ABB6098003F3B1A /* player.hpp */,
 				755285182ABB5BD2003F3B1A /* application.h */,
 				755285192ABB5C74003F3B1A /* application.cpp */,
 			);
@@ -157,6 +162,7 @@
 			files = (
 				7552851A2ABB5C74003F3B1A /* application.cpp in Sources */,
 				755284EB2ABB12A5003F3B1A /* main.cpp in Sources */,
+				7552851D2ABB6098003F3B1A /* player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
