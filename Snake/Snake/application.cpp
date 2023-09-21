@@ -1,9 +1,8 @@
 #include "application.h"
-
+SDL_Renderer *Application::m_window_renderer = nullptr;
 Application::Application()
-    : m_window(), m_window_renderer(), m_keep_window_open(true) // Initialize m_keep_window_open
+    : m_window(), m_keep_window_open(true)
 {
-    // Constructor code
 }
 
 Application::~Application()
@@ -12,11 +11,11 @@ Application::~Application()
 
 bool Application::initialize()
 {
-    // Initialize SDL and create window/renderer here
+    // Initialize SDL and create window/renderer
     m_window = SDL_CreateWindow("Snake Game",
                                 SDL_WINDOWPOS_CENTERED,
                                 SDL_WINDOWPOS_CENTERED,
-                                1280, 720,
+                                windowWidth, windowHeight,
                                 0);
 
     if (!m_window)
@@ -40,7 +39,7 @@ bool Application::initialize()
 
 void Application::cleanup()
 {
-    // Cleanup and release resources here
+    // Cleanup and release resources
     SDL_DestroyRenderer(m_window_renderer);
     SDL_DestroyWindow(m_window);
 }
@@ -58,7 +57,6 @@ void Application::handleEvents(SDL_Event(&event))
                         m_keep_window_open = false;
                         break;
                 }
-        
     }
 }
 
@@ -70,7 +68,7 @@ bool Application::isWindowOpen() const
 
 void Application::render() {
     SDL_RenderPresent(m_window_renderer); // You need to call this to update the window
-    SDL_SetRenderDrawColor(m_window_renderer, 100, 0, 20, 255); // Use member variables
+    SDL_SetRenderDrawColor(m_window_renderer, 0, 0, 0, 255); // Use member variables
     SDL_RenderClear(m_window_renderer); // You need to call this to update the window
 
 }

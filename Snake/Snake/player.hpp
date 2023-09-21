@@ -1,9 +1,9 @@
 #pragma once
 #include "application.h"
 
-class Player : public Application {
+class Player {
 public:
-    Player(Application &application, int w, int h, int x, int y, int r, int g, int b, int a);
+    Player(int w, int h, int x, int y, int r, int g, int b, int a);
    
     void pollEvents(SDL_Event(&event));
     void draw() const;

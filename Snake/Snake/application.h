@@ -14,13 +14,14 @@ public:
     void cleanup();
     bool isWindowOpen() const;
     void render();
-    
+    int windowWidth = 1200;
+    int windowHeight = 720;
     
 private:
     SDL_Window *m_window;;
     SDL_Event m_window_event;
     bool m_keep_window_open; // New member variable to track window state
     
-protected:
-    SDL_Renderer *m_window_renderer;
+public:
+  static SDL_Renderer *m_window_renderer;
 };
