@@ -12,8 +12,9 @@ int main()
     
     std::vector<Player> objectsToDraw;
 
-       objectsToDraw.push_back(Player(50, 50, 100, 100, 100, 0, 100, 255));
-      
+       
+    objectsToDraw.push_back(Player(25, 25, 200, 200, 255, 0, 0, 255, false));
+    objectsToDraw.push_back(Player(50, 50, 100, 100, 0, 100, 100, 255, true));
         
     while (app.isWindowOpen()) {
         SDL_SetRenderDrawColor(Application::m_window_renderer, 0, 0, 0, 255); // background color

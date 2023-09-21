@@ -1,7 +1,7 @@
 #include "player.hpp"
 
-Player::Player(int w, int h, int x, int y, int r, int g, int b, int a) :
-     _w(w), _h(h), _x(x), _y(y), _r(r), _g(g), _b(b), _a(a)
+Player::Player(int w, int h, int x, int y, int r, int g, int b, int a, bool isControlled) :
+     _w(w), _h(h), _x(x), _y(y), _r(r), _g(g), _b(b), _a(a), _isControlled(isControlled)
 {
 }
 
@@ -18,7 +18,7 @@ void Player::draw(SDL_Renderer* m_window_renderer) const
 }
 
 void Player::pollEvents(SDL_Event(&event)) {
-        if(event.type == SDL_KEYDOWN) {
+        if(_isControlled && event.type  == SDL_KEYDOWN) {
             switch(event.key.keysym.sym) {
                 case SDLK_LEFT:
                     _x -= 10 ;

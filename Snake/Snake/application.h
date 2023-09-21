@@ -14,8 +14,8 @@ public:
     void cleanup();
     bool isWindowOpen() const;
     void render();
-    int windowWidth = 1200;
-    int windowHeight = 720;
+    int windowWidth = 500;
+    int windowHeight = 500;
     
 private:
     SDL_Window *m_window;;
