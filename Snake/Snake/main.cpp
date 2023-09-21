@@ -1,6 +1,6 @@
 #include "player.hpp"
 
-void pollEvent(Application &application, Player &player);
+void pollEvent(Application &application, std::vector<Player> &objects);
 
 int main()
 {
@@ -10,13 +10,21 @@ int main()
         return 0;
     }
     
-    Player player(50,50,100,100,100,0,100,255);
+    std::vector<Player> objectsToDraw;
+
+       objectsToDraw.push_back(Player(50, 50, 100, 100, 100, 0, 100, 255));
+      
         
     while (app.isWindowOpen()) {
-        player.draw();
-    
-        pollEvent(app, player);
-        app.render();
+        SDL_SetRenderDrawColor(Application::m_window_renderer, 0, 0, 0, 255); // background color
+        SDL_RenderClear(Application::m_window_renderer); // Clear the renderer
+       
+        for (const Player& obj : objectsToDraw) {
+            obj.draw(Application::m_window_renderer); //Pass the renderer obtained from Application
+            
+        }
+        SDL_RenderPresent(Application::m_window_renderer); // Present the renderer to update the window
+        pollEvent(app, objectsToDraw);
     }
     
     app.cleanup();
@@ -24,11 +32,14 @@ int main()
 }
 
 
-void pollEvent(Application &application, Player &player) {
+void pollEvent(Application &application, std::vector<Player> &objects) {
     SDL_Event event;
-    
-    if(SDL_PollEvent(&event)) {
-        player.pollEvents(event);
+
+    if (SDL_PollEvent(&event)) {
+        for (Player& obj : objects) {
+            obj.pollEvents(event);
+        }
+
         application.handleEvents(event);
     }
 }

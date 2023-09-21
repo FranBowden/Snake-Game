@@ -5,7 +5,7 @@ Player::Player(int w, int h, int x, int y, int r, int g, int b, int a) :
 {
 }
 
-void Player::draw() const
+void Player::draw(SDL_Renderer* m_window_renderer) const
 {
     SDL_Rect player;
     player.x = _x;
@@ -13,7 +13,7 @@ void Player::draw() const
     player.w = _w;
     player.h = _h;
     
-    SDL_SetRenderDrawColor(Application::m_window_renderer, 200, 0, 200, 255);
+    SDL_SetRenderDrawColor(Application::m_window_renderer, _r, _g, _b, _a);
     SDL_RenderFillRect(Application::m_window_renderer, &player);
 }
 

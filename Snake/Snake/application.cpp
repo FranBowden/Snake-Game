@@ -1,5 +1,7 @@
 #include "application.h"
+
 SDL_Renderer *Application::m_window_renderer = nullptr;
+
 Application::Application()
     : m_window(), m_keep_window_open(true)
 {
@@ -67,8 +69,8 @@ bool Application::isWindowOpen() const
 }
 
 void Application::render() {
-    SDL_RenderPresent(m_window_renderer); // You need to call this to update the window
-    SDL_SetRenderDrawColor(m_window_renderer, 0, 0, 0, 255); // Use member variables
-    SDL_RenderClear(m_window_renderer); // You need to call this to update the window
-
+    SDL_RenderClear(m_window_renderer); // Clear the renderer
+    SDL_SetRenderDrawColor(m_window_renderer, 0, 0, 0, 255); // Set the clear color
+    SDL_RenderPresent(m_window_renderer); // Present the renderer to update the window
+   
 }

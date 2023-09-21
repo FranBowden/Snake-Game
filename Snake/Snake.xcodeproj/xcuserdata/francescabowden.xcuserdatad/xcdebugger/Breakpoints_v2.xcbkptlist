@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "93368B76-8283-42CC-9B10-8D69C45F661C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AE3C5DC-6E4C-49D3-A1F2-26BF87EC4122"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Snake/application.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "Application::render()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1AE3C5DC-6E4C-49D3-A1F2-26BF87EC4122 - 49ca837f92ef1e9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Application::render()"
+                  moduleName = "Snake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescabowden/Desktop/Snake-Game/Snake/Snake/application.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "1AE3C5DC-6E4C-49D3-A1F2-26BF87EC4122 - 49ca837f92ef1eb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Application::render()"
+                  moduleName = "Snake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescabowden/Desktop/Snake-Game/Snake/Snake/application.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
