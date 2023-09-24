@@ -25,20 +25,33 @@ int main()
     const int frameDelay = 1000 / targetFrameRate;  // Calculate frame delay in milliseconds
     Uint32 frameStart;
     int frameTime;
+    
+    // Define two colors for the grid squares
+    SDL_Color color1 = {255,196,12, 255}; // Yellow
+    SDL_Color color2 = {251,153,2, 255}; // Orange
+    
+    bool useColor1 = true;
         
-    while (app.isWindowOpen()) {
+    while (app.isWindowOpen()) { //Application opened
         frameStart = SDL_GetTicks();
-        SDL_SetRenderDrawColor(render, 0, 0, 0, 255); // background color
+      
         SDL_RenderClear(render); // Clear the renderer
        
-        // Draw grid lines
-         SDL_SetRenderDrawColor(render, 50, 50, 50, 255); // Grid color (gray in this example)
-         for (int x = 0; x < app.windowWidth; x += gridSize) {
-             SDL_RenderDrawLine(render, x, 0, x, app.windowHeight);
-         }
-         for (int y = 0; y < app.windowHeight; y += gridSize) {
-             SDL_RenderDrawLine(render, 0, y, app.windowWidth, y);
-         }
+        //Grid Layout to alternate colours
+        for (int x = 0; x < app.windowWidth; x += gridSize) {
+               for (int y = 0; y < app.windowHeight; y += gridSize) {
+                   SDL_Color currentColor = useColor1 ? color1 : color2;
+                   SDL_SetRenderDrawColor(render, currentColor.r, currentColor.g, currentColor.b, currentColor.a);
+                   SDL_Rect squareRect = {x, y, gridSize, gridSize};
+                   SDL_RenderFillRect(render, &squareRect);
+                   useColor1 = !useColor1; // Toggle the color for the next square
+               }
+               // Toggle the starting color for the next row
+               useColor1 = !useColor1;
+           }
+        
+        
+        
         
         for (const Player& obj : objectsToDraw) {
             obj.draw(render); //Pass the renderer obtained from Application
