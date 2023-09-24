@@ -1,6 +1,6 @@
 #include "application.h"
 
-SDL_Renderer *Application::m_window_renderer = nullptr;
+SDL_Renderer* Application::m_window_renderer = nullptr;
 
 Application::Application()
     : m_window(), m_keep_window_open(true)

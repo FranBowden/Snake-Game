@@ -24,16 +24,16 @@ void Player::pollEvents(SDL_Event(&event)) {
 
         switch (event.key.keysym.sym) {
             case SDLK_LEFT:
-                newX -= 10;
+                newX -= 50;
                 break;
             case SDLK_RIGHT:
-                newX += 10;
+                newX += 50;
                 break;
             case SDLK_UP:
-                newY -= 10;
+                newY -= 50;
                 break;
             case SDLK_DOWN:
-                newY += 10;
+                newY += 50;
                 break;
         }
 
