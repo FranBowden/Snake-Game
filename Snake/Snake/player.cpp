@@ -18,20 +18,29 @@ void Player::draw(SDL_Renderer* m_window_renderer) const
 }
 
 void Player::pollEvents(SDL_Event(&event)) {
-        if(_isControlled && event.type  == SDL_KEYDOWN) {
-            switch(event.key.keysym.sym) {
-                case SDLK_LEFT:
-                    _x -= 10 ;
-                    break;
-                case SDLK_RIGHT:
-                    _x += 10;
-                    break;
-                case SDLK_UP:
-                    _y -= 10;
-                    break;
-                case SDLK_DOWN:
-                    _y += 10;
-                    break;
-            }
+    if (_isControlled && event.type == SDL_KEYDOWN) {
+        int newX = _x;
+        int newY = _y;
+
+        switch (event.key.keysym.sym) {
+            case SDLK_LEFT:
+                newX -= 10;
+                break;
+            case SDLK_RIGHT:
+                newX += 10;
+                break;
+            case SDLK_UP:
+                newY -= 10;
+                break;
+            case SDLK_DOWN:
+                newY += 10;
+                break;
         }
+
+        // Check if the new position is within the window bounds
+        if (newX >= 0 && newX + _w <= 500 && newY >= 0 && newY + _h <= 500) {
+            _x = newX;
+            _y = newY;
+        }
+    }
 }

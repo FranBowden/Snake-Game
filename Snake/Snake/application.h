@@ -8,7 +8,6 @@ class Application {
 public:
     Application();
     ~Application();
-
     bool initialize();
     void handleEvents(SDL_Event(&event));
     void cleanup();
