@@ -14,8 +14,8 @@
             filePath = "Snake/application.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "Application::render()"
             landmarkType = "7">
             <Locations>
@@ -48,6 +48,36 @@
                   startingLineNumber = "72"
                   endingLineNumber = "72"
                   offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "1AE3C5DC-6E4C-49D3-A1F2-26BF87EC4122 - 49ca837f92ef1ed0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Application::render()"
+                  moduleName = "Snake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescabowden/Desktop/Snake-Game/Snake/Snake/application.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "1AE3C5DC-6E4C-49D3-A1F2-26BF87EC4122 - 49ca837f92ef1eb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Application::render()"
+                  moduleName = "Snake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescabowden/Desktop/Snake-Game/Snake/Snake/application.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>

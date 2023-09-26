@@ -13,6 +13,7 @@ Application::~Application()
 
 bool Application::initialize()
 {
+    std::cout << "Application Opened" << std::endl;
     // Initialize SDL and create window/renderer
     m_window = SDL_CreateWindow("Snake Game",
                                 SDL_WINDOWPOS_CENTERED,

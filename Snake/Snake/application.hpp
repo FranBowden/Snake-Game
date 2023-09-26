@@ -8,7 +8,6 @@ class Application {
 public:
     Application();
     ~Application();
-
     bool initialize();
     void handleEvents(SDL_Event(&event));
     void cleanup();
@@ -16,7 +15,6 @@ public:
     void render();
     int windowWidth = 500;
     int windowHeight = 500;
-    void direction(SDL_Event(&event));
     
 private:
     SDL_Window *m_window;;
